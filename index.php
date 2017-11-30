@@ -12,7 +12,7 @@ define('CONNECTION', 'sql2.njit.edu');
 class Manage {
     public static function autoload($class) {
         //you can put any file name or directory here
-        include $class . '.php';
+        include str_replace('\\','/',$class) . '.php';
     }
 }
 spl_autoload_register(array('Manage', 'autoload'));
