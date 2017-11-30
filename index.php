@@ -11,12 +11,12 @@ define('CONNECTION', 'sql2.njit.edu');
 //Autuloader class
 class Manage {
     public static function autoload($class) {
-        //you can put any file name or directory here
-        include str_replace('\\','/',$class) . '.php';
+
+        include 'classes/'. str_replace('\\','/',$class) . '.php';
     }
 }
 spl_autoload_register(array('Manage', 'autoload'));
-//instantiate the main object
+
 $obj = new main();
 
 class main{

@@ -1,4 +1,5 @@
 <?php
+namespace database;
 
 Abstract class collection {
     static public function create() {

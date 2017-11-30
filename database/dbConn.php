@@ -1,4 +1,5 @@
 <?php
+namespace database;
 
 class dbConn{
     //variable to hold connection object.

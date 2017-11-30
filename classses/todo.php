@@ -1,6 +1,6 @@
 <?php
 
-class todo extends model {
+ class todo extends \database\model {
     public $id;
     public $owneremail;
     public $ownerid;
