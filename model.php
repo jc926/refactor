@@ -51,14 +51,14 @@ Abstract class model {
     
             $statement->execute();
 
-            //$id = $db->lastInsertId();
+            $id = $db->lastInsertId();
         } catch (PDOException $e){
             echo 'SQL error is:' . $e->getMessage();
         } 
         
         //$tableName = get_called_class();
         //$this->tableName;
-        
+        return $id;
 
        // echo "INSERT INTO $tableName (" . $columnString . ") VALUES (" . $valueString . ")</br>";
      //  echo 'I just saved record: ' . $this->id;

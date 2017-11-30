@@ -40,7 +40,7 @@ class main{
         $newT->owneremail = '@njit.edu';
         $newT->ownerid = 'jc1234';
         $newT->createddate = '11/18';
-        $newT ->save();
+        $id = $newT ->save();
         $tableshow = htmltable:: Otable($newT);
         $form .=$tableshow;
         $form .= '</form>';
@@ -51,7 +51,7 @@ class main{
         $newA->fname = "'J'";
         $newA->lname = "'C'";
         $newA->phone = "'1314'";
-        $newA->save();
+        $id = $newA->save();
         $tableshow = htmltable:: Otable($newA);
         $form .=$tableshow;
         $form .= '</form>';
@@ -59,7 +59,7 @@ class main{
         $form .='<h1>find delete accouts records</h1>';
         //$oldA =accounts::findOne($lastid);
         $newA= new account();
-        $newA->id = 88;
+        $newA->id = $id;
         $newA->delete();
         $tableshow = htmltable:: Otable($newA);
         $form .=$tableshow;
