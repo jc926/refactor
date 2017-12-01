@@ -1,5 +1,5 @@
 <?php
-class account extends \database\model{
+final class account extends database\ model{
     public $id;
     public $email;
     public $fname;
